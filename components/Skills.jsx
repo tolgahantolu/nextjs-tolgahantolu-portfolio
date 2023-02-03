@@ -7,7 +7,12 @@ import {
 } from "react-icons/fa";
 import { DiJavascript1, DiMongodb } from "react-icons/di";
 import { IoLogoFirebase } from "react-icons/io5";
-import { SiGraphql, SiRedux, SiTailwindcss } from "react-icons/si";
+import {
+  SiApollographql,
+  SiGraphql,
+  SiRedux,
+  SiTailwindcss,
+} from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
 import { CgNpm } from "react-icons/cg";
 
@@ -43,15 +48,6 @@ const Skills = ({ experiences }) => {
           {/* skill */}
           <div className="flex flex-col gap-y-2 items-center">
             <div className="w-[80px] h-[80px] rounded-full flex justify-center items-center bg-headline">
-              <span className="text-[45px] text-[#593D88] ">
-                <SiRedux />
-              </span>
-            </div>
-            <p className="text-paragraph font-poppins text-[15px]">Redux</p>
-          </div>
-          {/* skill */}
-          <div className="flex flex-col gap-y-2 items-center">
-            <div className="w-[80px] h-[80px] rounded-full flex justify-center items-center bg-headline">
               <span className="text-[50px] text-[#000]">
                 <TbBrandNextjs />
               </span>
@@ -61,11 +57,29 @@ const Skills = ({ experiences }) => {
           {/* skill */}
           <div className="flex flex-col gap-y-2 items-center">
             <div className="w-[80px] h-[80px] rounded-full flex justify-center items-center bg-headline">
+              <span className="text-[45px] text-[#593D88] ">
+                <SiApollographql />
+              </span>
+            </div>
+            <p className="text-paragraph font-poppins text-[15px]">Apollo</p>
+          </div>
+          {/* skill */}
+          <div className="flex flex-col gap-y-2 items-center">
+            <div className="w-[80px] h-[80px] rounded-full flex justify-center items-center bg-headline">
               <span className="text-[50px] text-[#E00097]">
                 <SiGraphql />
               </span>
             </div>
             <p className="text-paragraph font-poppins text-[15px]">GraphQL</p>
+          </div>
+          {/* skill */}
+          <div className="flex flex-col gap-y-2 items-center">
+            <div className="w-[80px] h-[80px] rounded-full flex justify-center items-center bg-headline">
+              <span className="text-[45px] text-[#593D88] ">
+                <SiRedux />
+              </span>
+            </div>
+            <p className="text-paragraph font-poppins text-[15px]">Redux</p>
           </div>
           {/* skill */}
           <div className="flex flex-col gap-y-2 items-center">
