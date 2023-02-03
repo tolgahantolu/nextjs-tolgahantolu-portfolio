@@ -59,3 +59,30 @@ export const getPostsData = async () => {
   const result = await request(graphqlAPIEndpoint, query);
   return result.posts;
 };
+
+export const getPostDetailData = async (slug) => {
+  const query = gql`
+    query getDetails($slug: String!) {
+      post(where: { slug: $slug }) {
+        title
+        createdAt
+        content {
+          raw
+          text
+        }
+        featuredImage {
+          url
+        }
+        author {
+          name
+          photo {
+            url
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPIEndpoint, query, { slug });
+  return result.post;
+};
