@@ -1,5 +1,13 @@
 import Head from "next/head";
-import { Navbar, Hero, Quote, Skills, Portfolio } from "../components";
+import {
+  Navbar,
+  Hero,
+  Quote,
+  Skills,
+  Portfolio,
+  Contact,
+  Footer,
+} from "../components";
 import { getExperiencesData, getProjectsData } from "../services";
 
 export default function Home({ experiences, projects }) {
@@ -22,6 +30,8 @@ export default function Home({ experiences, projects }) {
             <Quote />
             <Skills experiences={experiences} />
             <Portfolio projects={projects} />
+            <Contact />
+            <Footer />
           </main>
         </div>
       </div>
