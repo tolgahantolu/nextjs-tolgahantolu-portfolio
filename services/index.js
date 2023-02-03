@@ -34,3 +34,28 @@ export const getProjectsData = async () => {
   const result = await request(graphqlAPIEndpoint, query);
   return result.projects;
 };
+
+export const getPostsData = async () => {
+  const query = gql`
+    query {
+      posts(orderBy: createdAt_DESC) {
+        title
+        slug
+        excerpt
+        createdAt
+        author {
+          name
+          photo {
+            url
+          }
+        }
+        featuredImage {
+          url
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPIEndpoint, query);
+  return result.posts;
+};
