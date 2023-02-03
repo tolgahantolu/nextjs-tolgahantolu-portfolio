@@ -1,9 +1,8 @@
 import Head from "next/head";
-import { Navbar, Hero, Quote, Skills } from "../components";
-import { getExperiencesData, getSkillsData } from "../services";
+import { Navbar, Hero, Quote, Skills, Portfolio } from "../components";
+import { getExperiencesData, getProjectsData } from "../services";
 
-export default function Home({ experiences }) {
-  console.log(experiences);
+export default function Home({ experiences, projects }) {
   return (
     <>
       <Head>
@@ -22,6 +21,7 @@ export default function Home({ experiences }) {
           <main>
             <Quote />
             <Skills experiences={experiences} />
+            <Portfolio projects={projects} />
           </main>
         </div>
       </div>
@@ -31,10 +31,12 @@ export default function Home({ experiences }) {
 
 export const getServerSideProps = async () => {
   const experiences = await getExperiencesData();
+  const projects = await getProjectsData();
 
   return {
     props: {
       experiences,
+      projects,
     },
   };
 };

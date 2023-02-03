@@ -16,3 +16,21 @@ export const getExperiencesData = async () => {
   const result = await request(graphqlAPIEndpoint, query);
   return result.experiences;
 };
+
+export const getProjectsData = async () => {
+  const query = gql`
+    query {
+      projects(orderBy: createdAt_DESC) {
+        title
+        description
+        slug
+        featuredImage {
+          url
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPIEndpoint, query);
+  return result.projects;
+};
