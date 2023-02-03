@@ -6,8 +6,8 @@ import {
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
-import { SiRedux } from "react-icons/si";
-import { TbBrandTailwind, TbBrandFirebase } from "react-icons/tb";
+import { SiApollographql, SiMongodb, SiRedux } from "react-icons/si";
+import { TbBrandTailwind } from "react-icons/tb";
 import Image from "next/image";
 
 const Hero = () => {
@@ -65,7 +65,7 @@ const Hero = () => {
         </a>
       </div>
 
-      <div className="badge md:flex flex-row items-center font-poppins justify-center gap-x-5 bg-badge px-6 py-3 rounded-xl text-[22px] text-lightB text-center md:absolute md:bottom-[60px] md:right-60 hidden">
+      <div className="badge md:flex flex-row items-center font-poppins justify-center gap-x-5 bg-badge px-6 py-3 rounded-xl text-[22px] text-lightB text-center md:absolute md:bottom-[60px] md:right-[200px] hidden">
         <span>
           <FaReact fontSize={25} />
         </span>
@@ -73,7 +73,10 @@ const Hero = () => {
           <SiRedux fontSize={22} />
         </span>
         <span>
-          <TbBrandFirebase fontSize={23} />
+          <SiMongodb fontSize={23} />
+        </span>
+        <span>
+          <SiApollographql fontSize={23} />
         </span>
         <span>
           <TbBrandTailwind fontSize={25} />
