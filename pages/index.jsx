@@ -1,13 +1,5 @@
 import Head from "next/head";
-import {
-  Navbar,
-  Hero,
-  Quote,
-  Skills,
-  Portfolio,
-  Contact,
-  Footer,
-} from "../components";
+import { Navbar, Hero, Quote, Skills, Portfolio, Contact } from "../components";
 import { getExperiencesData, getProjectsData } from "../services";
 
 export default function Home({ experiences, projects }) {
@@ -20,21 +12,16 @@ export default function Home({ experiences, projects }) {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
-      <div className="px-10 bg-main overflow-hidden">
-        <div className="lg:max-w-[1280px] mx-auto">
-          <header>
-            <Navbar />
-            <Hero />
-          </header>
-          <main>
-            <Quote />
-            <Skills experiences={experiences} />
-            <Portfolio projects={projects} />
-            <Contact />
-            <Footer />
-          </main>
-        </div>
-      </div>
+      <header>
+        <Navbar />
+        <Hero />
+      </header>
+      <main>
+        <Quote />
+        <Skills experiences={experiences} />
+        <Portfolio projects={projects} />
+        <Contact />
+      </main>
     </>
   );
 }
