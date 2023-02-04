@@ -22,7 +22,13 @@ const Blog = ({ posts }) => {
         </Link>
       </div>
       <div className="mt-2">
-        <Image src={blog} alt="blog background" width={1280} height={280} />
+        <Image
+          src={blog}
+          alt="ryland_dean unsplash.com | https://unsplash.com/photos/6k6N8HTrXyE"
+          width={1280}
+          height={280}
+          className="w-auto h-auto object-cover object-center hidden sm:block"
+        />
         <div className="mt-10 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
           {posts.map((post, i) => (
             <PostCard key={i} {...post} />

@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import moment from "moment";
+import { FaCalendarCheck } from "react-icons/fa";
 
 const PostCard = ({
   author,
@@ -30,11 +31,14 @@ const PostCard = ({
                 </div>
               </div>
               <div className="mt-5 mb-6 flex flex-col gap-3">
-                <h1 className="text-[28px] leading-9 font-bold tracking-wide text-white">
+                <h1 className="text-[22px] leading-8 xs:text-[28px] xs:leading-9 font-bold tracking-wide text-white">
                   {title}
                 </h1>
-                <p className="text-[17px] text-badge">{excerpt}</p>
-                <p className="text-xs text-headline">
+                <p className="text-[15px] xs:text-[17px] text-badge">
+                  {excerpt}
+                </p>
+                <p className="text-[10px] xs:text-xs text-headline leading-none flex items-center gap-x-1">
+                  <FaCalendarCheck />
                   {moment(createdAt).format("MMM DD, YYYY")}
                 </p>
               </div>

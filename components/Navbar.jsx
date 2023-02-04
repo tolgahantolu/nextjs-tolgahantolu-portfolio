@@ -12,7 +12,7 @@ const Navbar = () => {
         Tolgahan<span className="text-gradient">.</span>
       </Link>
       <ul className="list-none sm:flex flex-row gap-x-5 justify-end items-center flex-1 hidden font-poppins">
-        <li className="transition duration-500 text-green text-lg py-2 px-4 border border-green hover:text-headline hover:bg-green">
+        <li className="transition duration-500 text-green text-lg py-2 px-4 border border-green hover:text-headline hover:bg-green rounded-3xl">
           <Link href="/blog">Blog</Link>
         </li>
         <li className="transition duration-500 hover:text-green">
@@ -43,7 +43,7 @@ const Navbar = () => {
           } bg-black-gradient absolute top-[60px] right-10 my-4 p-6 min-w-[140px] rounded-xl sidebar z-[5]`}
         >
           <ul className="list-none flex-1 flex flex-col justify-center items-center gap-y-5 font-poppins">
-            <li className="transition duration-500 text-green text-lg py-2 px-4 border border-green hover:text-headline hover:bg-green">
+            <li className="transition duration-500 text-green text-lg py-2 px-4 border border-green hover:text-headline hover:bg-green rounded-3xl">
               <Link
                 href="/blog"
                 onClick={() => setToggleMenu((prevToggle) => !prevToggle)}
