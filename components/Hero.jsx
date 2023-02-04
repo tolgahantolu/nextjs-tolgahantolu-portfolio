@@ -9,6 +9,7 @@ import {
 import { SiApollographql, SiMongodb, SiRedux } from "react-icons/si";
 import { TbBrandTailwind } from "react-icons/tb";
 import Image from "next/image";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -39,30 +40,30 @@ const Hero = () => {
       </div>
 
       <div className="badge flex flex-row items-center font-poppins justify-center gap-x-5 bg-badge px-6 py-3 rounded-xl text-lightB text-center md:absolute md:bottom-[120px] md:left-60">
-        <a
+        <Link
           href="https://twitter.com/tolgakodluyor"
           target="_self"
           referrerPolicy="no-referrer"
           className="transition duration-500 hover:text-[#1da1f2]"
         >
           <FaTwitter fontSize={22} />
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://www.linkedin.com/in/tolgahant/"
           target="_self"
           referrerPolicy="no-referrer"
           className="transition duration-500 hover:text-[#0a5881]"
         >
           <FaLinkedinIn fontSize={22} />
-        </a>
-        <a
+        </Link>
+        <Link
           href="https://github.com/tolgahantolu"
           target="_self"
           referrerPolicy="no-referrer"
           className="transition duration-500 hover:text-[#000]"
         >
           <FaGithub fontSize={22} />
-        </a>
+        </Link>
       </div>
 
       <div className="badge md:flex flex-row items-center font-poppins justify-center gap-x-5 bg-badge px-6 py-3 rounded-xl text-[22px] text-lightB text-center md:absolute md:bottom-[60px] md:right-[200px] hidden">
