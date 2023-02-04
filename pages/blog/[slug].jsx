@@ -6,7 +6,97 @@ import Link from "next/link";
 import { getPostDetailData } from "../../services";
 
 const BlogPostDetails = ({ post }) => {
-  console.log(post);
+  console.log(post.content.raw);
+  const getContentFragment = (index, text, obj, type) => {
+    let modifiedText = text;
+
+    if (obj) {
+      if (obj.bold) {
+        modifiedText = <b key={index}>{text}</b>;
+      }
+
+      if (obj.italic) {
+        modifiedText = <em key={index}>{text}</em>;
+      }
+
+      if (obj.underline) {
+        modifiedText = <u key={index}>{text}</u>;
+      }
+    }
+
+    switch (type) {
+      case "heading-one":
+        return (
+          <h1 key={index} className="text-5xl font-bold mb-4">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h1>
+        );
+      case "heading-two":
+        return (
+          <h2 key={index} className="text-4xl font-semibold mb-4">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h2>
+        );
+      case "heading-three":
+        return (
+          <h3 key={index} className="text-3xl font-semibold mb-4">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h3>
+        );
+      case "heading-four":
+        return (
+          <h4 key={index} className="text-2xl font-medium mb-4">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h4>
+        );
+      case "heading-five":
+        return (
+          <h5 key={index} className="text-xl font-medium mb-4">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h5>
+        );
+      case "heading-six":
+        return (
+          <h6 key={index} className="text-lg font-medium mb-4">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </h6>
+        );
+      case "paragraph":
+        return (
+          <p key={index} className="mb-8">
+            {modifiedText.map((item, i) => (
+              <React.Fragment key={i}>{item}</React.Fragment>
+            ))}
+          </p>
+        );
+
+      case "image":
+        return (
+          <Image
+            key={index}
+            alt={obj.title}
+            height={obj.height}
+            width={obj.width}
+            src={obj.src}
+          />
+        );
+      default:
+        return modifiedText;
+    }
+  };
+
   return (
     <>
       <Head>
@@ -21,7 +111,7 @@ const BlogPostDetails = ({ post }) => {
           Tolgahan<span className="text-gradient">.</span>
         </Link>
       </div>
-      <div className="py-20 px-6 md:px-24 lg:px-48 xl:px-72">
+      <div className="py-10 xs:py-20 xs:px-6 md:px-24 lg:px-48 xl:px-72">
         <div>
           <Image
             src={post.featuredImage.url}
@@ -57,7 +147,15 @@ const BlogPostDetails = ({ post }) => {
         </div>
 
         <div className="mt-8 mb-4">
-          <p className="sm:text-lg">{post.content.text}</p>
+          <div className="sm:text-lg">
+            {post.content.raw.children.map((typeObj, index) => {
+              const children = typeObj.children.map((item, itemIndex) =>
+                getContentFragment(itemIndex, item.text, item)
+              );
+
+              return getContentFragment(index, children, typeObj, typeObj.type);
+            })}
+          </div>
         </div>
       </div>
     </>

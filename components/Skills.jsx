@@ -57,7 +57,7 @@ const Skills = ({ experiences }) => {
           {/* skill */}
           <div className="flex flex-col gap-y-2 items-center">
             <div className="w-[80px] h-[80px] rounded-full flex justify-center items-center bg-headline">
-              <span className="text-[45px] text-[#593D88] ">
+              <span className="text-[45px] text-[#381EA0]">
                 <SiApollographql />
               </span>
             </div>
