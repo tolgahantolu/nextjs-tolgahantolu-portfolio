@@ -6,5 +6,16 @@ import Portfolio from "./Portfolio";
 import Contact from "./Contact";
 import Footer from "./Footer";
 import PostCard from "./PostCard";
+import Blog from "./Blog";
 
-export { Navbar, Hero, Quote, Skills, Portfolio, Contact, Footer, PostCard };
+export {
+  Navbar,
+  Hero,
+  Quote,
+  Skills,
+  Portfolio,
+  Contact,
+  Footer,
+  PostCard,
+  Blog,
+};

@@ -35,7 +35,7 @@ const PostCard = ({
                   {title}
                 </h1>
                 <p className="text-[15px] xs:text-[17px] text-badge">
-                  {excerpt}
+                  {excerpt.length > 120 && excerpt.slice(0, 120).concat("...")}
                 </p>
                 <p className="text-[10px] xs:text-xs text-headline leading-none flex items-center gap-x-1">
                   <FaCalendarCheck />

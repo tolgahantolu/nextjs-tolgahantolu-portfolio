@@ -1,8 +1,16 @@
 import Head from "next/head";
-import { Navbar, Hero, Quote, Skills, Portfolio, Contact } from "../components";
-import { getExperiencesData, getProjectsData } from "../services";
+import {
+  Navbar,
+  Hero,
+  Quote,
+  Skills,
+  Portfolio,
+  Contact,
+  Blog,
+} from "../components";
+import { getExperiencesData, getPostsData, getProjectsData } from "../services";
 
-export default function Home({ experiences, projects }) {
+export default function Home({ experiences, projects, posts }) {
   return (
     <>
       <Head>
@@ -20,6 +28,7 @@ export default function Home({ experiences, projects }) {
         <Quote />
         <Skills experiences={experiences} />
         <Portfolio projects={projects} />
+        <Blog posts={posts} />
         <Contact />
       </main>
     </>
@@ -29,11 +38,13 @@ export default function Home({ experiences, projects }) {
 export const getServerSideProps = async () => {
   const experiences = await getExperiencesData();
   const projects = await getProjectsData();
+  const posts = await getPostsData();
 
   return {
     props: {
       experiences,
       projects,
+      posts: posts.slice(0, 3),
     },
   };
 };
