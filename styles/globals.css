@@ -12,8 +12,28 @@
   }
 }
 
-* {
+*,
+*::before,
+*::after {
   scroll-behavior: smooth;
+  scrollbar-width: none;
+  scrollbar-color: #a7a9be #0f0e17;
+}
+
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #0f0e17;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #a7a9be;
+  border-radius: 20px;
 }
 
 .text-gradient {
@@ -126,25 +146,4 @@
   .badge {
     animation: none;
   }
-}
-
-/* ===== Scrollbar CSS ===== */
-/* Firefox */
-* {
-  scrollbar-width: none;
-  scrollbar-color: #a7a9be #0f0e17;
-}
-
-/* Chrome, Edge, and Safari */
-*::-webkit-scrollbar {
-  width: 8px;
-}
-
-*::-webkit-scrollbar-track {
-  background: #0f0e17;
-}
-
-*::-webkit-scrollbar-thumb {
-  background-color: #a7a9be;
-  border-radius: 20px;
 }

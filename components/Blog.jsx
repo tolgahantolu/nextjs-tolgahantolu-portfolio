@@ -3,7 +3,7 @@ import PostCard from "./PostCard";
 
 const Blog = ({ posts }) => {
   return (
-    <section className="sm:py-20 py-10 w-full h-full" id="skills">
+    <section className="sm:py-20 py-10 w-full h-full">
       <h1 className="font-poppins font-semibold text-headline sm:text-5xl text-[40px] leading-[50px]  text-center">
         Latest <span className="text-gradient"> Blog </span> Posts
       </h1>

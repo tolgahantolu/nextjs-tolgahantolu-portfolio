@@ -10,7 +10,7 @@ const Blog = ({ posts }) => {
   return (
     <>
       <Head>
-        <title>Blog - Tolgahan Tolu - Frontend Developer</title>
+        <title>Blog | Tolgahan Tolu - Frontend Developer</title>
         <link rel="icon" type="image/png" href="/t.png" />
         <meta name="description" content="Created by Tolgahan Tolu" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
