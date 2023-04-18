@@ -24,6 +24,7 @@ export const getProjectsData = async () => {
         title
         description
         slug
+        featuredProject
         featuredImage {
           url
         }

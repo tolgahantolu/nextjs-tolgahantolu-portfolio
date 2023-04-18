@@ -11,9 +11,7 @@ const ProjectCard = ({ featuredImage, title, description, slug }) => {
             src={featuredImage.url}
             alt={`${title} project`}
             fill
-            objectFit="contain"
-            objectPosition="center"
-            className="rounded-lg transition duration-700 opacity-80 md:opacity-100 group-hover:opacity-80"
+            className="object-contain object-center rounded-lg transition duration-700 opacity-80 md:opacity-100 group-hover:opacity-80"
           />
           <Link
             href={slug}
