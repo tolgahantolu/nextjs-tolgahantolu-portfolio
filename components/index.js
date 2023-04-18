@@ -7,6 +7,9 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import PostCard from "./PostCard";
 import Blog from "./Blog";
+import SectionTitle from "./SectionTitle";
+import ProjectCard from "./ProjectCard";
+import SectionButton from "./SectionButton";
 
 export {
   Navbar,
@@ -18,4 +21,7 @@ export {
   Footer,
   PostCard,
   Blog,
+  ProjectCard,
+  SectionTitle,
+  SectionButton,
 };

@@ -1,3 +1,4 @@
+import { SectionTitle } from "./index";
 import {
   FaBootstrap,
   FaFigma,
@@ -19,9 +20,9 @@ import { CgNpm } from "react-icons/cg";
 const Skills = ({ experiences }) => {
   return (
     <section className="sm:py-20 py-10 w-full h-full" id="skills">
-      <h1 className="font-poppins font-semibold text-headline sm:text-5xl text-[40px] leading-[50px]  text-center">
-        Skills <span className="text-gradient"> & </span> Experience
-      </h1>
+      <div className="font-poppins leading-[50px] capitalize text-center">
+        <SectionTitle text1="skills" text2="experience" gradientText="&" />
+      </div>
       <div className="mt-10 flex md:flex-row flex-col gap-5">
         {/* skills side */}
         <div className="bg-black-gradient rounded-xl px-10 py-12 flex-1 grid grid-cols-1 xxs:grid-cols-2 xs:grid-cols-3 sm:grid-cols-5 gap-5">
