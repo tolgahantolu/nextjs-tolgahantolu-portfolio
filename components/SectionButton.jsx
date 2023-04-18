@@ -6,7 +6,7 @@ const SectionButton = ({ href, text }) => {
   return (
     <Link
       href={href}
-      className="px-4 py-2 rounded-full text-base sm:text-lg bg-gradient-to-r from-dimGreen to-green flex items-center gap-1"
+      className="px-4 py-2 rounded-full text-base sm:text-lg bg-gradient-to-r from-dimGreen to-green flex items-center justify-center gap-1"
     >
       {text} <AiOutlineCaretRight />
     </Link>

@@ -4,7 +4,7 @@ import { PostCard, SectionTitle, SectionButton } from "./index";
 const Blog = ({ posts }) => {
   return (
     <section className="sm:py-20 py-10 w-full h-full">
-      <div className="font-poppins leading-[50px] flex justify-center items-center gap-3 capitalize">
+      <div className="font-poppins leading-[50px] flex flex-col sm:flex-row justify-center items-center gap-3 capitalize">
         <SectionTitle text1="latest" text2="posts" gradientText="blog" />
         <SectionButton href="/blog" text="see all blog posts" />
       </div>

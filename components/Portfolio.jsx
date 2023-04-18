@@ -3,7 +3,7 @@ import { ProjectCard, SectionTitle, SectionButton } from "./index";
 const Portfolio = ({ projects }) => {
   return (
     <section className="quote sm:py-20 py-10 w-full h-full" id="works">
-      <div className="font-poppins leading-[50px] flex justify-center items-center gap-3 capitalize">
+      <div className="font-poppins leading-[50px] flex flex-col xs:flex-row justify-center items-center gap-3 capitalize">
         <SectionTitle
           text1="my creative"
           text2="section"
