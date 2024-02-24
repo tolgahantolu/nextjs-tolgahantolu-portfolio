@@ -1,5 +1,7 @@
 import Link from "next/link";
-import { FaTwitter, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
+
 
 const Footer = () => {
   return (
@@ -14,7 +16,7 @@ const Footer = () => {
           referrerPolicy="no-referrer"
           className="transition duration-500 p-3 border border-paragraph rounded-full text-paragraph hover:bg-[#1da1f2]"
         >
-          <FaTwitter fontSize={15} />
+          <FaXTwitter fontSize={15} />
         </Link>
         <Link
           href="https://www.linkedin.com/in/tolgahant/"

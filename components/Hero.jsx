@@ -2,10 +2,10 @@ import { tolgahan } from "/public";
 import {
   FaReact,
   FaSass,
-  FaTwitter,
   FaLinkedinIn,
   FaGithub,
 } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { SiApollographql, SiMongodb, SiRedux } from "react-icons/si";
 import { TbBrandTailwind } from "react-icons/tb";
 import Image from "next/image";
@@ -46,7 +46,7 @@ const Hero = () => {
           referrerPolicy="no-referrer"
           className="transition duration-500 hover:text-[#1da1f2]"
         >
-          <FaTwitter fontSize={22} />
+          <FaXTwitter fontSize={22} />
         </Link>
         <Link
           href="https://www.linkedin.com/in/tolgahant/"
